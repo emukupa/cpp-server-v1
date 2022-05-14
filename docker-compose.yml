@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  web:
+    build: ./site
+    image: emukupa/cpp-web:1.0.0
+    volumes:
+      - ./site:/usr/src/site
+    ports:
+      - 8080:8080
+    environment:
+      - PORT=8080
